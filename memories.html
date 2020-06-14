@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="memories.css">
+    <title>Memories</title>
+</head>
+<body>
+<br>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="riddhi.html" >Home</a>
+        </li>
+    </ul>
+</nav>
+<br>
+<div class="header">
+    <h1 style="text-align: center; color: #C64661">You've unlocked the treasure!</h1>
+</div>
+<br>
+<div class="container" >
+    <div class="row">>
+        <div class="col-sm-6">
+            <br><br>
+           <ul>
+               <li class="memorylist">Waveboarding in CCI! Our legendary trail! And the iconic video where I fell:"Say something, say something"</li>
+               <li class="memorylist">Mahabaleshwar! Singing Tra-lalala-la and come-on, come-on and dancing.</li>
+               <li class="memorylist">Playing prisoner and random games on the lawns.</li>
+               <li class="memorylist">All your favourites: Jugal and Deepak and Kundan and Krishna.</li>
+               <li class="memorylist">All our childhood Goa trips with our families and jumping around in the pool all day.</li>
+               <li class="memorylist">Making sandcastles with all our spades and shovels in the sandpit and playing on the slides and monkey bars.</li>
+               <li class="memorylist">The goa trip with our Goa gang! From competitive mafia to surviving on Dominoes to Sync!</li>
+               <li class="memorylist">Going clubbing(and bouncing and going to Mc donalds instead)</li>
+               <li class="memorylist">All the CCI christmas partiess!</li>
+               <li class="memorylist">Our trips to wada, "sunbathing" on that table.</li>
+               <li class="memorylist">She just forgot something and you told her that?</li>
+               <li class="memorylist">Talking about random "shit" .</li>
+               <li class="memorylist">I'm so glad we finally got to have the same friends circle in the 11th and 12th.</li>
+               <li class="memorylist">Playing teacher-teacher on my blackboard and jumping on the trampoline when we were kids to how you continued to write on my blackboard everytime you came over.</li>
+               <li class="memorylist">The famous kitchen set! And all the toys you had stacked in that big drawer of yours under your bed in your old house.</li>
+               <li class="memorylist">All the dance parties (flamboyante!)</li>
+               <li class="memorylist">Sitting on the dining table and taking eternity to eat (and competing who ate more)</li>
+               <li class="memorylist">Tarak Mehta! Your favourite!</li>
+               <li class="memorylist">You're my "lamboo, chashmish" friend.</li>
+               <li class="memorylist">Abhay uncle's "Rajasvi" and "Rajvi, Kaisi hai tu meri dost!"</li>
+               <li class="memorylist">We've had so many sleepovers!(And it's been soo long since we've had one!)</li>
+               <li class="memorylist">Longer the distance, longer the calls!</li>
+               <li class="memorylist">Meeting at someone's house to play board games!</li>
+               <li class="memorylist">The lonavala trip with everyone!Della was soo much fun! Zorbing and  bubble soccer and paintball! </li>
+               <li class="memorylist">All your nicknames for me! Ofcourse, the most important, Paru!</li>
+
+
+
+           </ul>
+        </div>
+        <div class="col-sm-4">
+            <div class="container">
+                <p style="text-align: center; font-size: xx-large; color: #C64661">Open me!</p>
+                <button class="button" id="showmemories" style="width: 100%" onclick="displayMemory()">
+                    <img id="openbox" src="treasureopen.jpg" style="width: 100%">
+                </button>
+                <br>
+                <button class="button" id="viewAll" onclick="viewAll()" style="background: #C64661; color: white">View All</button>
+                <button class="button" id="hideAll" onclick="hideAll()" style="background: #C64661; color: white; float: right">Hide All</button>
+
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+</body>
+</html>
+<script>
+    let mem=0;
+    function displayMemory(){
+           let i;
+            let mems = document.getElementsByClassName("memorylist");
+            for (i = 0; i < mems.length; i++) {
+                mems[i].style.display = "none";
+            }
+            mem++;
+            if (mem > mems.length) {mem= 1}
+            mems[mem-1].style.display = "block";
+            }
+    function viewAll() {
+        let i;
+        let mems = document.getElementsByClassName("memorylist");
+        for (i = 0; i < mems.length; i++) {
+            mems[i].style.display = "block";
+        }
+    }
+    function hideAll() {
+        let i;
+        let mems = document.getElementsByClassName("memorylist");
+        for (i = 0; i < mems.length; i++) {
+            mems[i].style.display = "none";
+        }
+    }
+
+
+
+</script>

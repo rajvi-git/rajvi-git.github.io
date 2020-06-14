@@ -1,0 +1,29 @@
+
+/* Style the list items*/
+.newList {
+    cursor: pointer;
+    position: relative;
+    list-style-type: none;
+    font-size: larger;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: white;
+}
+
+textarea{
+    color: darkviolet;
+    border-color: darkviolet;
+    height: 100px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: larger;
+}
+.addBtn{
+    border-color: darkviolet;
+    color: darkviolet;
+}
+.addBtn:hover {
+    background-color: darkorchid;
+}

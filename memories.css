@@ -1,0 +1,16 @@
+body{
+    background-color: #E6CCB5;
+}
+.memorylist{
+    display: none;
+    background-color: #C64661;
+    color: white;
+    height: 120px;
+    font-size: larger;
+    margin: 10%;
+    padding: 2%;
+
+}
+#openbox:hover{
+    opacity: 40%;
+}

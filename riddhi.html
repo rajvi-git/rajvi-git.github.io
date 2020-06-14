@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HAPPY BIRTHDAY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="riddhi.css">
+</head>
+<body>
+<div class="container">
+    <br>
+    <div class="page-header">
+        <h1>HAPPY BIRTHDAY RIDDHI!</h1>
+    </div>
+    <br>
+    <p id="letter" style="font-size: larger">Happy 20th to my favourite person! I'm so so lucky to have you as my best friend. From 2 to 20, our bond's just grown stronger and stronger. From playing in the sandpit to having deep conversations , from family trips to friends trips, from going to princess parties to going to new years parties, from meeting regularly to talking on the phone everyday from different cities, we've grown up together and I wouldn't have had it any other way. Thank you for always being there for me, for listening to all my rants and never failing to make me smile. I love laughing like crazy at the stupidest things with you, doing weird shit, and, more than anything, just being me. You're someone I can relate to the most and just talking to you makes me happy. You're extremely weird yet you're genuine and passionate, and I'm so proud of you . You continue to inspire me every single day.
+    <br><br>
+        Even though I can't meet you despite both of us being in Mumbai, this is a little gift to make you smile! Love you!    </div>
+    <br>
+    <div class="container" id="picgallery">
+        <div class="row">>
+        <div class="col-sm-7">
+            <br><br>
+            <p style="text-align: justify; font-size: larger; margin: 10%"> Pictures speak a thousand words, don't they! This is a picture gallery reminiscing years worth of memories, from little kids to young adults!        </div>
+            <div class="col-sm-4">
+
+                <div class="container">
+                    <a href="pictures.html" style="text-align: center; color: white; font-size: larger">Picture gallery</a>
+                    <div class="mySlides fade">
+                        <img src="Riddhi1.jpeg">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="Riddhi2.jpeg">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="Riddhi3.jpeg">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="Riddhi4.jpeg">
+                    </div>
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+        </div>
+        </div>
+<br>
+    <div class="container" id="memories">
+    <div class="row">>
+        <div class="col-sm-7">
+            <br><br>
+            <p style="text-align: justify; font-size: larger; margin: 10%"> We've had soo many amazing times together, so many more than I can write down, probably so many more than I can even remember. I'll always cherish all our memories. This box has some invaluable treasure filled inside it. Open it, but be careful, its exploding! </p>
+        </div>
+        <div class="col-sm-4">
+            <div class="container">
+                <p style="text-align: center; font-size: larger">Open me!</p>
+                <a href="memories.html">
+                <img id="memorybox" src="memorybox1.jpeg">
+                </a>
+                </div>
+        </div>
+    </div>
+        <br>
+    </div>
+<br>
+    <div class="container" id="Finally20">
+    <div class="row">>
+        <div class="col-sm-7">
+            <br><br>
+            <p style="text-align: justify; font-size: larger; margin: 10%"> Lastly, this is a small thing for to do. As you enter your 20s, you have a lot in store for you. Write a few notes to yourself as you enter this new year! They can be big things you want to achieve or even small fun things you want to strike off your bucket list!</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="container">
+                <p style="text-align: center; font-size: larger">Write here!</p>
+                <a href="Finally20.html">
+                    <img id="book" src="book.png">
+                </a>
+            </div>
+        </div>
+    </div>
+        <br>
+    </div>
+
+</body>
+<br>
+<footer class="container-fluid" style="text-align: right">Love, Rajvi</footer>
+</html>
+<script>
+
+   let slideIndex = 0;
+   showSlides();
+
+   function showSlides() {
+       let i;
+       let slides = document.getElementsByClassName("mySlides");
+       let dots = document.getElementsByClassName("dot");
+       for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";
+       }
+       slideIndex++;
+       if (slideIndex > slides.length) {slideIndex = 1}
+       for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+       }
+       slides[slideIndex-1].style.display = "block";
+       dots[slideIndex-1].className += " active";
+       setTimeout(showSlides, 2000); // Change image every 2 seconds
+   }
+   const messages=["You're beautiful, inside-out!","You're the best friend I could ask for!", "Go poop!","I love you!","I'll always be there for you!","You're old now!","I miss youuu!"];
+   document.addEventListener('DOMContentLoaded',function () {
+        setInterval(count,20000);
+   });
+   let counter=0;
+   function count() {
+    alert(messages[counter%messages.length]);
+    counter++;
+   }
+
+</script>
