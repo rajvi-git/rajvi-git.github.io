@@ -22,8 +22,7 @@
     </div>
     <div class="container col-sm-10" style=" border-style:double ;border-color: #FD8282; height: 80%">
         <ul id="list" style="color: #FD8282">
-    <li>1</li>
-        </ul>
+            </ul>
         </div>
     <br>
     <div class="container col-sm-10" id="addentry">
@@ -37,9 +36,35 @@
 
 
 
-        let myNodelist = document.getElementsByTagName("LI");
+        let myNodelist = document.getElementsByClassName("newList");
         let i;
-        for (i = 0; i < localStorage.getItem('myNodelist').length; i++) {
+        const input=document.getElementById("entry")
+        let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : []
+        localStorage.setItem('items', JSON.stringify(itemsArray))
+        const data = JSON.parse(localStorage.getItem('items'))
+        const liMaker = text => {
+            const li = document.createElement('li')
+            li.className="newList"
+            li.textContent = text
+            document.getElementById("list").appendChild(li);
+
+            let span = document.createElement("SPAN");
+            let txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            li.appendChild(span);
+
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    let div = this.parentElement;
+                    div.style.display = "none";
+                    let x=itemsArray[i];
+                    localStorage.removeItem(x);
+                }
+            }
+
+        }
+        for (i = 0; i < myNodelist.length; i++) {
             let span = document.createElement("SPAN");
             let txt = document.createTextNode("\u00D7");
             span.className = "close";
@@ -53,22 +78,37 @@
             close[i].onclick = function () {
                 let div = this.parentElement;
                 div.style.display = "none";
+                let x=itemsArray[i];
+                localStorage.removeItem(x);
             }
         }
 
         // Create a new list item when clicking on the "Add" button
         function newElement() {
-            let li = document.createElement("li");
-            li.className="newList";
-            let inputValue = document.getElementById("entry").value;
-            let t = document.createTextNode(inputValue);
-            li.appendChild(t);
-            if (inputValue === '') {
+            itemsArray.push(input.value)
+            localStorage.setItem('items', JSON.stringify(itemsArray))
+            if (input.value === '') {
                 alert("Write something!");
             } else {
-                document.getElementById("list").appendChild(li);
+                liMaker(input.value)
             }
-            document.getElementById("entry").value = "";
+            input.value = ''
+        }
+        data.forEach(item => {
+            liMaker(item)
+        })
+
+        /*let li = document.createElement("li");
+        li.className="newList";
+        let inputValue = document.getElementById("entry").value;
+        let t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+            alert("Write something!");
+        } else {
+            document.getElementById("list").appendChild(li);
+        }
+        document.getElementById("entry").value = "";
 
             let span = document.createElement("SPAN");
             let txt = document.createTextNode("\u00D7");
@@ -81,8 +121,8 @@
                     let div = this.parentElement;
                     div.style.display = "none";
                 }
-            }
-        }
+            };*/
+
 
 
 </script>
